@@ -11,13 +11,94 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+
+      <!-- new button -->
+
+  <div class="new-btn btn-Download">
+    <button  class="btn-upper btn-yellow btn" onclick="showDownloadForm()">
+      <a href="#">Download Brochure</a>
+      </button>
+    </div>
+
+    <!-- Schedule Site Visit form -->
+
+    <div  class="Schedule-main">
+      <div id="form-div">
+        <i class="close-menu fa-solid fa-x" onclick="showScheduleForm()"></i>
+        <form class="form" id="form1">
+          <h3 style="text-align: center;">Schedule Site Visit</h3>
+          
+          <p class="name">
+            <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+          </p>
+          
+          <p class="email">
+            <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+          </p>
+          
+          <p class="text">
+            <input name="text" type="text" class="validate[required,custom[number]] feedback-input" id="number" placeholder="Phone Number" />
+          </p>
+          <p class="text">
+            <input name="text" type="date" class=" feedback-input" id="number" placeholder="name" />
+          </p>
+          
+          
+          <div class="submit">
+            <button class="tn-upper  btn">
+              <a href="thankyouSchedule.html"  >Submit</a>
+            </button>
+            
+            
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+     <!-- Download Brochure form -->
+
+     <div  class="Schedule-main Download-main">
+      <div id="form-div">
+        <i class="close-menu fa-solid fa-x" onclick="showDownloadForm()"></i>
+        <form class="form" id="form1" >
+          <h3 style="text-align: center;">Download Brochure</h3>
+          
+          <p class="name">
+            <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+          </p>
+          
+          <p class="email">
+            <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+          </p>
+          
+          <p class="text">
+            <input name="text" type="text" class="validate[required,custom[number]] feedback-input" id="number" placeholder="Phone Number" />
+          </p>
+          
+          
+          
+          <div class="submit">
+            <button  class="tn-upper  btn">
+              <a href="img/hyderabadeast.pdf" download="hyderabadeast" onclick="showDownloadthanks()">Download</a>
+            </button>
+            
+            
+          </div>
+
+        
+        </form>
+      </div>
+    </div>
     <div class="preloader">
-      <div class="preloader-body">
+      <!-- <div class="preloader-body">
         <div class="cssload-container"><span></span><span></span><span></span><span></span>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="page">
       <header class="section page-header">
@@ -30,17 +111,17 @@
                 <ul class="list-inline list-inline-md">
                   <li>
                     <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"><span class="icon icon-sm fa fa-mobile-phone text-white"></span></div>
-                      <div class="unit-body"><a class="link-contact link-white" href="tel:#">1-300-123-1234</a></div>
+                      
+                      <div class="unit-body">
+                        
+                        <button  class="btn-upper  btn" onclick="showScheduleForm()">
+                          <a href="#">Schedule Site Visit</a>
+                          </button>
+                      
+                      </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"><a class="link-white" href="#"><span class="icon fa fa-facebook"></span></a></div>
-                      <div class="unit-left"><a class="link-white" href="#"><span class="icon fa fa-instagram"></span></a></div>
-                      <div class="unit-left"><a class="link-white" href="#"><span class="icon fa fa-twitter"></span></a></div>
-                    </div>
-                  </li>
+                 
                 </ul>
               </div>
             </div>
@@ -62,17 +143,21 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="#about">About</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#our-services">Our Services</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#experience">Experience Pranava</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#gallery">Gallery</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact-us">Contact Us</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#Contacts">Contact Us</a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <!--RD Navbar Search-->
-                <div class="rd-navbar-contact"><span class="icon fa fa-mobile-phone icon-sm text-primary"></span><a class="link-contact link-white" href="tel:#">1-300-123-1234</a></div>
+                <div class="rd-navbar-contact">
+                  <button  class="btn-upper  btn" onclick="showScheduleForm()">
+                    <a href="#">Schedule Site Visit</a>
+                    </button>
+                </div>
               </div>
             </div>
           </nav>
@@ -81,13 +166,7 @@
       <!--Main Section-->
 
       <section class="section position-relative bg-gray-800 block-left-main" id="home">
-        <div class="left-block"><span class="left-block-title">Follow us</span>
-          <ul class="left-block-list line-decorative">
-            <li><a class="link-white" href="#"><span class="icon fa fa-facebook"></span></a></li>
-            <li><a class="link-white" href="#"><span class="icon fa fa-instagram"></span></a></li>
-            <li><a class="link-white" href="#"><span class="icon fa fa-twitter"></span></a></li>
-          </ul>
-        </div>
+        
         <div class="swiper-container swiper-slider" data-loop="false" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
           <div class="swiper-wrapper">
             <div class="swiper-slide context-dark" data-slide-bg="img/slider1.jpg">
@@ -101,7 +180,7 @@
                     <div class="col-xxl-7">
                       <h4 class="swiper-caption-subtitle" data-caption-animate="fadeInUp" data-caption-delay="100">Hyderabad, India</h4>
                       <h1 class="swiper-caption-title" data-caption-animate="fadeInUp" data-caption-delay="250">Prime Location </h1>
-                      <h6 class="swiper-caption-subtitle-2" data-caption-animate="fadeInUp" data-caption-delay="350">The world’s bigest building</h6><a class="button button-top button-default-outline button-icon button-icon-right" href="#" data-caption-animate="fadeInUp" data-caption-delay="450" data-waypoint-to="#view-project"><span class="icon mdi mdi-chevron-right"></span>Download Brochure
+                      <h6 class="swiper-caption-subtitle-2" data-caption-animate="fadeInUp" data-caption-delay="350">The world’s bigest building</h6><a class="button button-top button-default-outline button-icon button-icon-right" href="#" data-caption-animate="fadeInUp" data-caption-delay="450" data-waypoint-to="#view-project"><span class="icon mdi mdi-chevron-right" onclick="showDownloadForm()"></span>Download Brochure
                       </a>
                     </div>
                   </div>
@@ -119,7 +198,7 @@
                     <div class="col-xxl-7">
                       <h4 class="swiper-caption-subtitle" data-caption-animate="fadeInUp" data-caption-delay="100">Hyderabad, India</h4>
                       <h1 class="swiper-caption-title" data-caption-animate="fadeInUp" data-caption-delay="250">Spacious Homes </h1>
-                      <h6 class="swiper-caption-subtitle-2" data-caption-animate="fadeInUp" data-caption-delay="350">The world’s bigest building</h6><a class="button button-top button-default-outline button-icon button-icon-right" href="#" data-caption-animate="fadeInUp" data-caption-delay="450" data-waypoint-to="#view-project"><span class="icon mdi mdi-chevron-right"></span>Download Brochure
+                      <h6 class="swiper-caption-subtitle-2" data-caption-animate="fadeInUp" data-caption-delay="350">The world’s bigest building</h6><a class="button button-top button-default-outline button-icon button-icon-right" href="#" data-caption-animate="fadeInUp" data-caption-delay="450" data-waypoint-to="#view-project"><span class="icon mdi mdi-chevron-right" onclick="showDownloadForm()"></span>Download Brochure
                       </a>
                     </div>
                   </div>
@@ -137,7 +216,7 @@
                     <div class="col-xxl-7">
                       <h4 class="swiper-caption-subtitle" data-caption-animate="fadeInUp" data-caption-delay="100">Hyderabad, India</h4>
                       <h1 class="swiper-caption-title" data-caption-animate="fadeInUp" data-caption-delay="250">World -Class Amenities </h1>
-                      <h6 class="swiper-caption-subtitle-2" data-caption-animate="fadeInUp" data-caption-delay="350">The world’s bigest building</h6><a class="button button-top button-default-outline button-icon button-icon-right" href="#" data-caption-animate="fadeInUp" data-caption-delay="450" data-waypoint-to="#view-project"><span class="icon mdi mdi-chevron-right"></span>Download Brochure
+                      <h6 class="swiper-caption-subtitle-2" data-caption-animate="fadeInUp" data-caption-delay="350">The world’s bigest building</h6><a class="button button-top button-default-outline button-icon button-icon-right" href="#" data-caption-animate="fadeInUp" data-caption-delay="450" data-waypoint-to="#view-project"><span class="icon mdi mdi-chevron-right" onclick="showDownloadForm()"></span>Download Brochure
                       </a>
                     </div>
                   </div>
@@ -162,27 +241,27 @@
           <div class="row row-50 justify-content-lg-between">
             <div class="col-lg-6">
               <h6 class="subtitle-section text-primary wow fadeInLeft" data-wow-delay=".1s">About us</h6>
-              <h2 class="title-section block-1 wow fadeInLeft" data-wow-delay=".2s">The East Crest Project - </h2>
-              <p class="text-gray-800 wow fadeInLeft" data-wow-delay=".3s">The Pranava East Crest is a stunning residential project located in the heart of Hastinapuram, Hyderabad.  In this project we offer a perfect blend of modern luxury and comfortable living. It’s prime location and all-round amenities aims to make your life luxuriously comfortable. </p>
+              <h2 class="title-section block-1 " data-wow-delay=".2s">The East Crest Project - </h2>
+              <p class="text-gray-800 " data-wow-delay=".3s">The Pranava East Crest is a stunning residential project located in the heart of Hastinapuram, Hyderabad.  In this project we offer a perfect blend of modern luxury and comfortable living. It’s prime location and all-round amenities aims to make your life luxuriously comfortable. </p>
 <br>
               <h4>Tops Schools and colleges in the vicinity - 
               </h4>
-              <p class="fw-light wow fadeInLeft" data-wow-delay=".4s">6 Schools and 3 High Schools including - 
+              <p class="fw-light " data-wow-delay=".4s">6 Schools and 3 High Schools including - 
                 </p>
-              <p class="fw-light wow fadeInLeft" data-wow-delay=".4s">Seventh Day Adventist High School -  0.22 KM
+              <p class="fw-light " data-wow-delay=".4s">Seventh Day Adventist High School -  0.22 KM
                 Narayana ETechno School - 0.23 KM
                 Akshara Junior College, B N Reddy Nagar - 0.52 KM
                 </p>
               <div class="row row-40 text-center text-lg-start box-nina-wrapper">
-                <div class="col-sm-4 box-nina wow fadeInUp" data-wow-delay=".2s">
+                <div class="col-sm-4 box-nina " data-wow-delay=".2s">
                   <div class="box-nina-icon"><span class="icon icon-lg text-gray-800 linearicons-apartment"></span></div>
                   <h6 class="box-nina-title"><a href="#">Architecture</a></h6>
                 </div>
-                <div class="col-sm-4 box-nina wow fadeInUp" data-wow-delay=".2s">
+                <div class="col-sm-4 box-nina " data-wow-delay=".2s">
                   <div class="box-nina-icon mod-2"><span class="icon icon-lg text-gray-800 linearicons-chair"></span></div>
                   <h6 class="box-nina-title"><a href="#">Interiors</a></h6>
                 </div>
-                <div class="col-sm-4 box-nina wow fadeInUp" data-wow-delay=".2s">
+                <div class="col-sm-4 box-nina" data-wow-delay=".2s">
                   <div class="box-nina-icon"><span class="icon icon-lg text-gray-800 linearicons-compass"></span></div>
                   <h6 class="box-nina-title"><a href="#">Planning</a></h6>
                 </div>
@@ -207,7 +286,7 @@
                 <h6 class="subtitle-section text-primary wow fadeInUp" data-wow-delay=".1s">Our Services</h6>
                 <h2 class="title-section block-2 wow fadeInUp" data-wow-delay=".2s">Construction Solutions</h2>
               </div>
-              <div class="block-3 img-offset-top"><img class="wow fadeInLeft" src="img/TYPICALFF.jpg" alt="" width="585" height="585" data-wow-delay=".1s"/>
+              <div class="block-3 img-offset-top"><img class="wow fadeInLeft" src="img/gallery5.jpg" alt="" width="585" height="585" data-wow-delay=".1s"/>
               </div>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
@@ -224,7 +303,7 @@
                 <div class="">
                   <p>Convenient commuting to major IT parks
                   </p>
-                  <p>Experience the epitome of luxury living at Pranava East Crest. Immerse yourself in a world of comfort and convenience, surrounded by modern amenities and a thriving community.</p>
+                  <p id="experience">Experience the epitome of luxury living at Pranava East Crest. Immerse yourself in a world of comfort and convenience, surrounded by modern amenities and a thriving community.</p>
                 </div>
                 <div class="box-zita bg-primary Experience">
                   <h4 class="box-zita-title">Experience the Pranava Difference - </h4>
@@ -274,78 +353,19 @@
           </div>
         </div>
       </section>
-      <!--Gallery-->
-      <section class="section" id="projects">
-        <div class="container-fluid wow fadeInUp" data-wow-delay=".3s">
-          <div class="isotope-wrap" id="view-project">
-            <div class="row row-condensed g-0 isotope product" data-isotope-layout="masonry" data-column-class=".col-1" data-isotope-group="gallery-02" data-lightgallery="group">
-              <div class="col-1 isotope-item isotope-sizer"></div>
-              <div class="col-sm-6 col-xl-3 isotope-item offset-top-2">
-                <!-- Gallery Classic-->
-                <article class="gallery-classic">
-                  <div class="gallery-classic-figure product-img"><img src="img/View_02.jpg" alt="" width="480" height="780"/>
-                  </div>
-                  <div class="gallery-classic-text">
-                    <h4 class="gallery-classic-title">Hyderabad, India</h4>
-                    <h6 class="gallery-classic-subtitle">project management</h6>
-                  </div>
-                  <div class="gallery-classic-caption"></div>
-                  <!-- <div class="gallery-classic-button"><a class="button icon linearicons-zoom-in" href="img/View_02.jpg"" data-lightgallery="item"><img src="img/View_02.jpg"" alt="" width="480" height="780"/></a></div> -->
-                </article>
-              </div>
-              <div class="col-sm-6 col-xl-3 isotope-item offset-top-2">
-                <!-- Gallery Classic-->
-                <article class="gallery-classic">
-                  <div class="gallery-classic-figure product-img"><img src="img/View_03.jpg"" alt="" width="480" height="780"/>
-                  </div>
-                  <div class="gallery-classic-text">
-                    <h4 class="gallery-classic-title">Hyderabad, India</h4>
-                    <h6 class="gallery-classic-subtitle">Architectural services</h6>
-                  </div>
-                  <div class="gallery-classic-caption"></div>
-                  <!-- <div class="gallery-classic-button"><a class="button icon linearicons-zoom-in" href="img/View_03.jpg" data-lightgallery="item"><img src="img/View_03.jpg" alt="" width="480" height="780"/></a></div> -->
-                </article>
-              </div>
-              <div class="col-sm-6 col-xl-3 isotope-item offset-top-2">
-                <!-- Gallery Classic-->
-                <article class="gallery-classic">
-                  <div class="gallery-classic-figure product-img"><img src="img/View_06.jpg" alt="" width="480" height="780"/>
-                  </div>
-                  <div class="gallery-classic-text">
-                    <h4 class="gallery-classic-title">Hyderabad, India</h4>
-                    <h6 class="gallery-classic-subtitle">Pre-construction</h6>
-                  </div>
-                  <div class="gallery-classic-caption"></div>
-                  <!-- <div class="gallery-classic-button"><a class="button icon linearicons-zoom-in" href="img/View_06.jpg" data-lightgallery="item"><img src="img/View_06.jpg" alt="" width="480" height="780"/></a></div> -->
-                </article>
-              </div>
-              <div class="col-sm-6 col-xl-3 isotope-item offset-top-2">
-                <!-- Gallery Classic-->
-                <article class="gallery-classic">
-                  <div class="gallery-classic-figure product-img"><img src="img/View_07.jpg" alt="" width="480" height="780"/>
-                  </div>
-                  <div class="gallery-classic-text">
-                    <h4 class="gallery-classic-title">Reggio Emilia, Italy</h4>
-                    <h6 class="gallery-classic-subtitle">Facade engineering</h6>
-                  </div>
-                  <div class="gallery-classic-caption"></div>
-                  <!-- <div class="gallery-classic-button"><a class="button icon linearicons-zoom-in" href="img/View_07.jpg" data-lightgallery="item"><img src="img/View_07.jpg" alt="" width="480" height="780"/></a></div> -->
-                </article>
-              </div>
-            </div>
-          </div>
-          <div class="text-center button-top-2"><a class="button button-primary-outline wow fadeInUp" href="#" data-wow-delay="2.s">View All Projects</a></div>
-        </div>
-      </section>
+
+
+
+      
       <!--Our Team-->
-      <section class="section section-lg section-collapse bg-default">
+      <section class="section section-lg section-collapse bg-default" id="gallery">
         <div class="container">
           <div class="row row-30 justify-content-center">
             <div class="col-md-6">
               <div class="row row-30">
                 <div class="col-lg-12">
                   <div class="text-center text-md-start">
-                    <h6 class="subtitle-section text-primary wow fadeInLeft" data-wow-delay=".1s"></h6>
+                    <h6 class="subtitle-section text-primary " data-wow-delay=".1s"></h6>
                     <h2 class="title-section wow fadeIneft" data-wow-delay=".2s"><br class='d-none d-xl-block'> Gallery</h2>
                   </div>
                   <div class="offset-top-3 wow fadeInLeft" data-wow-delay=".2s">
@@ -356,7 +376,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12 wow fadeInLeft" data-wow-delay=".2s">
+                <div class="col-md-12 " data-wow-delay=".2s">
                   <div class="box-dina">
                     <div class="box-dina-img"><img src="img/gallery2.jpg" alt="" width="570" height="670"/>
                     </div>
@@ -367,14 +387,14 @@
             </div>
             <div class="col-md-6">
               <div class="row row-30">
-                <div class="col-md-12 wow fadeInRight" data-wow-delay=".2s">
+                <div class="col-md-12 " data-wow-delay=".2s">
                   <div class="box-dina">
                     <div class="box-dina-img"><img src="img/gallery3.jpg" alt="" width="570" height="670"/>
                     </div>
                     
                   </div>
                 </div>
-                <div class="col-md-12 wow fadeInRight" data-wow-delay=".2s">
+                <div class="col-md-12" data-wow-delay=".2s">
                   <div class="box-dina">
                     <div class="box-dina-img"><img src="img/gallery4.jpg" alt="" width="570" height="670"/>
                     </div>
@@ -394,7 +414,7 @@
                 <div class="row row-30">
                   <div class="col-lg-12">
                     
-                    <div class="offset-top-3 wow fadeInLeft" data-wow-delay=".2s">
+                    <div class="offset-top-3 " data-wow-delay=".2s">
                       <div class="box-dina">
                         <div class="box-dina-img"><img src="img/gallery5.jpg" alt="" width="570" height="670"/>
                         </div>
@@ -402,7 +422,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-12 wow fadeInLeft" data-wow-delay=".2s">
+                  <div class="col-md-12 " data-wow-delay=".2s">
                     <div class="box-dina">
                       <div class="box-dina-img"><img src="img/gallery6.jpg" alt="" width="570" height="670"/>
                       </div>
@@ -413,14 +433,14 @@
               </div>
               <div class="col-md-6">
                 <div class="row row-30">
-                  <div class="col-md-12 wow fadeInRight" data-wow-delay=".2s">
+                  <div class="col-md-12 " data-wow-delay=".2s">
                     <div class="box-dina">
                       <div class="box-dina-img"><img src="img/gallery7.jpg" alt="" width="570" height="670"/>
                       </div>
                       
                     </div>
                   </div>
-                  <div class="col-md-12 wow fadeInRight" data-wow-delay=".2s">
+                  <div class="col-md-12 " data-wow-delay=".2s">
                     <div class="box-dina">
                       <div class="box-dina-img"><img src="img/gallery8.jpg" alt="" width="570" height="670"/>
                       </div>
@@ -495,76 +515,12 @@
         
         </div>
       </section>
-      <!--Get in Touch-->
-      <section class="section section-lg section-collapse section-size bg-default" id="contact-us">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8">
-              <div class="text-center">
-                <h6 class="subtitle-section text-primary wow fadeIn" data-wow-delay=".1s">Contact Our Team</h6>
-                <h2 class="title-section ls-1 wow fadeIn" data-wow-delay=".2s">Get in Touch</h2>
-                <p>Looking forward to building your own residential or commercial property? Feel free to contact<br class='d-none d-xl-block'> us using the form below to discuss additional details of your project with our managers so<br class='d-none d-xl-block'> that our team could get started with your project right away.</p>
-                <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                  <div class="row row-40 wow fadeIn" data-wow-delay=".3s">
-                    <div class="col-12">
-                      <h4 class="fw-bold">Name</h4>
-                      <div class="form-wrap">
-                        <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required">
-                        <label class="form-label" for="contact-first-name">Type your name here</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <h4 class="fw-bold">Email</h4>
-                      <div class="form-wrap">
-                        <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
-                        <label class="form-label" for="contact-email">Type your email here</label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <h4 class="fw-bold">Message</h4>
-                      <div class="form-wrap form-wrap-textarea">
-                        <label class="form-label" for="contact-message">Type your message here</label>
-                        <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-12 text-center">
-                      <button class="button button-primary button-icon button-icon-right" type="submit"><span class="icon mdi mdi-chevron-right"></span>Send</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Let’s Work Together!-->
-      <section class="section section-md bg-primary">
-        <div class="container">
-          <div class="row g-0 row-30 justify-content-lg-between align-items-lg-center text-center text-lg-start">
-            <div class="col-lg-9 wow fadeInRight" data-wow-delay=".3s">
-              <h2 class="title-section ls-2">Construction of Any Complexity</h2>
-              <h6 class="subtitle-section-3">Trust our team with your next project</h6>
-            </div>
-            <div class="col-lg-3 text-lg-end wow fadeInLeft" data-wow-delay=".3s"><a class="button button-lg button-gray-800" href="#">Get Started</a></div>
-          </div>
-        </div>
-      </section>
-      <!--Our Clients-->
-      <section class="section section-lg section-lg-2-bottom context-dark bg-gray-800">
-        <div class="container">
-          <div class="row row-30 row-md-60 text-center">
-            <div class="col-12">
-              <h6 class="subtitle-section text-primary wow fadeIn" data-wow-delay=".1s">Our Clients</h6>
-              <h2 class="title-section ls-3 wow fadeIn" data-wow-delay=".2s">We Work Worldwide</h2>
-            </div>
-            <div class="col-12 wow fadeIn" data-wow-delay=".3s"><img src="img/map-img.png" alt=""/>
-            </div>
-          </div>
-        </div>
-      </section>
+    
+     
+      
       <footer class="section footer-classic context-dark">
         <div class="decorative-word"><span>E</span><span class="rotate">a</span><span>s</span><span>t</span><span>C</span><span>r</span><span>e</span><span>s</span><span>t</span></div>
-        <div class="container">
+        <div class="container" id="Contacts">
           <div class="row row-70 flex-column-reverse flex-xl-row">
             <div class="col-xl-10">
               <div class="row row-40">
@@ -573,11 +529,7 @@
                   <p class="footer-text">Gachibowli<br class='d-none d-lg-block'> Hyderabad, India</p>
                   <p class="footer-link"><a class="link-body" href="tel:#">9122345789</a></p>
                   <p class="footer-link-2"><a class="link-body" href="mailto:#">example@example.com</a></p>
-                  <ul class="social-list">
-                    <li><a class="link-white" href="#"><span class="icon icon-sm fa fa-facebook"></span></a></li>
-                    <li><a class="link-white" href="#"><span class="icon icon-sm fa fa-instagram"></span></a></li>
-                    <li><a class="link-white" href="#"><span class="icon icon-sm fa fa-twitter"></span></a></li>
-                  </ul>
+                
                 </div>
                 <div class="col-sm-6 col-xl-7 block-4 offset-top-4 inset-left-xl">
                   <p class="footer-text">The Pranava East Crest is a stunning residential project located in the heart of Hastinapuram, Hyderabad.  In this project we offer a perfect blend of modern luxury and comfortable living. It’s prime location and all-round amenities aims to make your life luxuriously comfortable. </p>
@@ -602,5 +554,50 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+       $('.client-carousel').owlCarousel({
+		    margin:30,
+		    smartSpeed:250,
+		    nav:true,
+		    navText:[],
+		    dots:true,
+		    autoHeight: true,
+		    responsiveRefreshRate:0,
+		    responsive:{
+		        0:{
+		            items:1
+		        },
+		        768:{
+		            items:1
+		        },
+		        992:{
+		        	items:2
+		        },
+		        1200:{
+		            items:2
+		        }
+		    }
+		});
+    </script>
+
+<script>
+  function showScheduleForm(){
+    let Form = document.getElementsByClassName('Schedule-main')[0];
+    console.log(Form);
+    
+    Form.classList.toggle('showScheduleForm');
+  }
+
+  function showDownloadForm(){
+    let Form = document.getElementsByClassName('Schedule-main')[1];
+    console.log(Form);
+    
+    Form.classList.toggle('showScheduleForm');
+  }
+  function showDownloadthanks(){
+    window.location.href = "thankyouBrochure.html";
+  }
+</script>
   </body>
 </html>

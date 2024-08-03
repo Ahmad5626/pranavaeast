@@ -1437,7 +1437,7 @@ a[href*='tel'], a[href*='mailto'] {
 
 @media (min-width: 1200px) {
 	.block-left-main {
-		padding-left: 28.8%;
+		padding-left: 12.8%;
 	}
 }
 
@@ -1464,6 +1464,7 @@ a[href*='tel'], a[href*='mailto'] {
 		max-width: 100%;
 		margin-right: 0;
 		margin-left: 0;
+		padding: 40px 40px 40px 0px;
 	}
 }
 
@@ -2375,6 +2376,9 @@ hr {
 	color: #ffffff;
 	background-color: transparent;
 	border-color: #e07502;
+}
+.button-default-outline{
+	background-color: #e07502;
 }
 
 .button-default-outline:hover, .button-default-outline:active, .button-default-outline.active {
@@ -4570,6 +4574,7 @@ html.tablet .ui-to-top {
 	font-family: "Montserrat", sans-serif;
 	text-transform: uppercase;
 	transition: .25s;
+	text-shadow: #e07502 1px 0 10px;
 }
 
 .rd-navbar-static .rd-nav-link:hover {
@@ -10170,7 +10175,7 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
 	color: white;
 }
 .Experience p{
-	color: rgb(207, 203, 203);
+	color:white
 }
 
 
@@ -10257,5 +10262,120 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
   }
   
   .box-zita-wrapper h5{
-	margin: 20px 0px;
+	margin: 20px 0px
+	;
+  }
+
+
+
+  /* new button */
+
+  .new-btn{
+	position: fixed;
+	right:  -4.2%;
+	top: 40%;
+	z-index: 1111;
+	transform: rotate(-90deg);
+	background-color: #e07502;
+  }
+  .new-btn a{
+	color:black
+  }
+
+  .rd-navbar-contact button{
+	background-color: #e07502;
+	
+  }
+  .rd-navbar-contact button a{
+	color: #000;
+  }
+   .btn-Download:hover a{
+	color: #d6b369;
+  }
+  @media(max-width: 768px){
+	.new-btn{
+	  right:  -14%;
+	}
+  }
+  .new-btn1 a{
+  color: #000;
+  }
+  .new-btn1:hover a{
+	color: #d6b369;
+  }
+  
+  /* form-div */
+
+
+  .Schedule-main{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1111;
+	transition: 0.5s;
+	
+  }
+  .showScheduleForm{
+	top: 0%;
+  }
+  #form-div{
+	width: 30%;
+	margin: 50px auto;
+	padding: 50px;
+	background-color:#d6b369 ;
+  }
+  #form1{
+	width: 100%;
+  }
+  
+  .submit .btn{
+  background-color: white !important;
+  margin: 20px 0px;
+  
+  }
+  #button-blue:hover{
+	background-color: black;
+  }
+  #form-div{
+	position: relative;
+  }
+  #form-div .close-menu{
+   right: 20px;
+   position:absolute;
+  }
+  #form-div .close-menu:hover{
+	color: white;
+  }
+  
+  @media(max-width: 768px){
+	#form-div{
+	  width: 80%;
+	}
+  } 
+
+  .form h3{
+	font-weight: 600;
+    font-size: 2.142rem;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+	color: #000;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='date']{
+	color: #fff;
+    background: #333;
+    border: 0;
+	display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+	padding: 0.2rem 1rem 0;
+    height: 3.6em;
   }
