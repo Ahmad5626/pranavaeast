@@ -150,7 +150,7 @@ html p a:hover {
 }
 
 .context-dark .swiper-caption-title, .bg-gray-700 .swiper-caption-title, .bg-gray-800 .swiper-caption-title {
-	color: #e07502;
+	color:black;
 }
 
 .context-dark .text-primary, .bg-gray-700 .text-primary, .bg-gray-800 .text-primary {
@@ -1437,7 +1437,7 @@ a[href*='tel'], a[href*='mailto'] {
 
 @media (min-width: 1200px) {
 	.block-left-main {
-		padding-left: 12.8%;
+		padding-left: 0%;
 	}
 }
 
